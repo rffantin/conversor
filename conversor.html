@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de medidas</title>
     <link rel="stylesheet" href="./conversor.css">
+    <script src="./conversor.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,9 @@
             <input type="number" id="valor">
 
             <label for="categoria">Selecione a categoria:</label>
+
             <select id="categoria">
+                <option selected disabled>Selecione uma categoria</option>
                 <option value="comprimento">Comprimento</option>
                 <option value="peso">Peso</option>
                 <option value="temperatura">Temperatura</option>
@@ -35,7 +38,7 @@
             <select id="unidadeDestino">
             </select>
 
-            <button type="button">Converter</button>
+            <button id="botaoConverter" type="button">Converter</button>
 
             <label for="resultado">Resultado:</label>
             <input type="text" id="resultado" readonly>
