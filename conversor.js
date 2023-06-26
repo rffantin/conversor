@@ -115,8 +115,65 @@ function conversao(){
     // var = 
 }
 
-// Funções de conversão
+// Funções de conversão de temperatura
 
 function celsiusFahrenheit(celsius){
     return (celsius * 9/5) + 32
+}
+function celsiusKelvin(celsius){
+    return celsius + 273.15
+}
+function fahrenheitCelsius(fahrenheit){
+    return (fahrenheit -32) * 5/9
+}
+function fahrenheitKelvin(fahrenheit){
+    return (fahrenheit -32) * 5/9 + 273.15 
+}
+function kelvinCelsius(kelvin){
+    return kelvin - 273.15
+}
+function kelvinFahrenheit(kelvin){
+    return (kelvin - 273.15) * 9/5 + 32
+}
+
+// Funções de conversão de comprimento
+
+function metroCentimetro(metro){
+    return metro * 100
+}
+function metroPolegada(metro){
+    return metro * 39.37
+}
+function centimetroMetro(centimetro){
+    return centimetro/100
+}
+function centimetroPolegada(centimetro){
+    return centimetro/2.54
+}
+function polegadaMetro(polegada){
+    return polegada/39.37
+}
+function polegadaCentimetro(polegada){
+    return polegada*2.54
+}
+
+// Funções de conversão de peso
+
+function quilogramaGrama(quilograma){
+    return quilograma*1000
+}
+function quilogramaLibra(quilograma){
+    return quilograma*2.205
+}
+function gramaQuilograma(grama){
+    return grama/1000
+}
+function gramaLibra(grama){
+    return grama/453.6
+}
+function libraQuilograma(libra){
+    return libra/2.205
+}
+function libraGrama(libra){
+    return libra*453.6
 }
