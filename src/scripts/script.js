@@ -39,6 +39,8 @@ function opcoesOrigem() {
     }
 }
 
+// Evento para popular as unidades Destino
+
 unidadeOrigem.addEventListener("change", opcoesDestino)
 
 function opcoesDestino() {
@@ -237,6 +239,8 @@ function libraQuilograma(libra) {
 function libraGrama(libra) {
     return libra * 453.6
 }
+
+// Função para exibir o resultado
 
 function exibeResultado(res) {
     resultado.innerText = `${res}`
