@@ -31,9 +31,26 @@ label{
 }
 
 footer{
-background-color: antiquewhite;
-height: 4vh;
-display: flex;
-justify-content: center;
-align-items: center;
+    background-color: antiquewhite;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.473);
+    background-color: rgb(141, 70, 70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 16%;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+span{
+    margin-bottom: 3%;
+    background-color: aliceblue;
 }
