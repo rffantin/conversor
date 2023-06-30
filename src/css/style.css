@@ -31,7 +31,8 @@ label{
 }
 
 footer{
-    background-color: antiquewhite;
+    background-color: black;
+    color: white;
     height: 4vh;
     display: flex;
     justify-content: center;
