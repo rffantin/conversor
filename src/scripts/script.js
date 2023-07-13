@@ -11,11 +11,11 @@ var resultado = document.getElementById("resultado")
 
 categoria.addEventListener("change", opcoesOrigem)
 
-
+// Funções para criação dos elementos de seleção
 function opcoesOrigem() {
     if (categoria.value === "comprimento") {
         unidadeOrigem.innerHTML = `
-        <option selected disabled>Selecione uma unidade</option>
+        <option value="none" selected disabled>Selecione uma unidade</option>
         <option value="metro">Metro</option>
         <option value="centimetro">Centímetro</option>
         <option value="polegada">Polegada</option>
@@ -23,7 +23,7 @@ function opcoesOrigem() {
     }
     if (categoria.value === "peso") {
         unidadeOrigem.innerHTML = `
-        <option selected disabled>Selecione uma unidade</option>
+        <option value="none" selected disabled>Selecione uma unidade</option>
         <option value="quilograma">Quilograma</option>
         <option value="grama">Grama</option>
         <option value="libra">Libra</option>
@@ -31,7 +31,7 @@ function opcoesOrigem() {
     }
     if (categoria.value === "temperatura") {
         unidadeOrigem.innerHTML = `
-        <option selected disabled>Selecione uma unidade</option>
+        <option value="none" selected disabled>Selecione uma unidade</option>
         <option value="celsius">Celsius</option>
         <option value="fahrenheit">Fahrenheit</option>
         <option value="kelvin">Kelvin</option>
@@ -43,26 +43,27 @@ function opcoesOrigem() {
 
 unidadeOrigem.addEventListener("change", opcoesDestino)
 
+// Funções para criação dos elementos de seleção
 function opcoesDestino() {
 
     // unidades de destino para comprimento
     if (unidadeOrigem.value === "metro") {
         unidadeDestino.innerHTML = `
-        <option selected disabled>Selecione uma unidade</option>
+        <option value="none" selected disabled>Selecione uma unidade</option>
         <option value="centimetro">Centímetro</option>
         <option value="polegada">Polegada</option>
         `
     }
     if (unidadeOrigem.value === "centimetro") {
         unidadeDestino.innerHTML = `
-        <option selected disabled>Selecione uma unidade</option>
+        <option value="none" selected disabled>Selecione uma unidade</option>
         <option value="polegada">Polegada</option>
         <option value="metro">Metro</option>
         `
     }
     if (unidadeOrigem.value === "polegada") {
         unidadeDestino.innerHTML = `
-        <option selected disabled>Selecione uma unidade</option>
+        <option value="none" selected disabled>Selecione uma unidade</option>
         <option value="centimetro">Centimetro</option>
         <option value="metro">Metro</option>
         `
@@ -71,21 +72,21 @@ function opcoesDestino() {
     // unidades de destino para peso
     if (unidadeOrigem.value === "quilograma") {
         unidadeDestino.innerHTML = `
-            <option selected disabled>Selecione uma unidade</option>
+            <option value="none" selected disabled>Selecione uma unidade</option>
             <option value="grama">Grama</option>
             <option value="libra">Libra</option>
             `
     }
     if (unidadeOrigem.value === "grama") {
         unidadeDestino.innerHTML = `
-            <option selected disabled>Selecione uma unidade</option>
+            <option value="none" selected disabled>Selecione uma unidade</option>
             <option value="quilograma">Quilograma</option>
             <option value="libra">Libra</option>
             `
     }
     if (unidadeOrigem.value === "libra") {
         unidadeDestino.innerHTML = `
-            <option selected disabled>Selecione uma unidade</option>
+            <option value="none" selected disabled>Selecione uma unidade</option>
             <option value="quilograma">Quilograma</option>
             <option value="grama">Grama</option>
             `
@@ -94,21 +95,21 @@ function opcoesDestino() {
     // unidades de destino para temperatura
     if (unidadeOrigem.value === "celsius") {
         unidadeDestino.innerHTML = `
-            <option selected disabled>Selecione uma unidade</option>
+            <option value="none" selected disabled>Selecione uma unidade</option>
             <option value="fahrenheit">Fahrenheit</option>
             <option value="kelvin">Kelvin</option>
             `
     }
     if (unidadeOrigem.value === "fahrenheit") {
         unidadeDestino.innerHTML = `
-            <option selected disabled>Selecione uma unidade</option>
+            <option value="none" selected disabled>Selecione uma unidade</option>
             <option value="celsius">Celsius</option>
             <option value="kelvin">Kelvin</option>
             `
     }
     if (unidadeOrigem.value === "kelvin") {
         unidadeDestino.innerHTML = `
-            <option selected disabled>Selecione uma unidade</option>
+            <option value="none" selected disabled>Selecione uma unidade</option>
             <option value="celsius">Celsius</option>
             <option value="fahrenheit">Fahrenheit</option>
             `
@@ -117,7 +118,15 @@ function opcoesDestino() {
 
 // Funções para executar a conversão ao clicar no botão "converter"
 
-botaoConverter.addEventListener("click", conversao)
+botaoConverter.addEventListener("click", validar)
+
+function validar(){
+    if(valorEntrada.value === '' || categoria.value === 'none' || unidadeOrigem.value === 'none' || unidadeDestino.value === 'none'){
+    alert("Por favor, preencha todos os campos.")
+    }else{
+        conversao()
+    }
+}
 
 function conversao() {
     var valor = +valorEntrada.value
@@ -176,7 +185,7 @@ function conversao() {
         exibeResultado(libraGrama(valor).toFixed(2))
     }
 }
-
+    
 // Funções de conversão de temperatura
 
 function celsiusFahrenheit(celsius) {
@@ -245,3 +254,4 @@ function libraGrama(libra) {
 function exibeResultado(res) {
     resultado.innerText = `${res}`
 }
+
