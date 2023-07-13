@@ -1,10 +1,14 @@
-*{
+/* Reset CSS */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header{
+/* Estilização do header */
+
+header {
     height: 6vh;
     background-color: black;
     color: white;
@@ -13,7 +17,9 @@ header{
     align-items: center;
 }
 
-main{
+/* Estilização da main */
+
+main {
     height: 90vh;
     width: 100vw;
     background-color: rgb(129, 39, 39);
@@ -23,23 +29,9 @@ main{
     align-items: center;
 }
 
+/* Estilização do formulário */
 
-label{
-    font-size: 20px;
-    display: block;
-    margin-top: 20px;
-}
-
-footer{
-    background-color: black;
-    color: white;
-    height: 4vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-form{
+form {
     box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.473);
     background-color: rgb(141, 70, 70);
     display: flex;
@@ -51,7 +43,40 @@ form{
     border-radius: 5%;
 }
 
-span{
-    margin-bottom: 3%;
-    background-color: aliceblue;
+/* Estilização dos labels */
+
+label {
+    font-size: 20px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+/* Estilização do botão Converter, chamado pelo ID por ser único */
+
+#botaoConverter {
+    margin: 15px;
+}
+
+/* Estilização do label Resultado */
+
+.labelResultado {
+    margin-top: -6px;
+}
+
+/* Estilização do campo onde exibe o resultado, chamado pelo ID por ser único */
+
+#resultado {
+    margin-bottom: 20px;
+}
+
+/* Estilização do footer */
+
+footer {
+    background-color: black;
+    color: white;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

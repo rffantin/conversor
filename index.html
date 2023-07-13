@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head contendo titulo, link para o css e js -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +17,12 @@
 
 
     <main>
-        <form id="converterform">
+        <!-- Formulário com as opções básicas de entrada -->
+        <form>
             <label for="valor">Valor</label>
             <input type="number" id="valor">
 
             <label for="categoria">Selecione a categoria:</label>
-
             <select id="categoria">
                 <option selected disabled>Selecione uma categoria</option>
                 <option value="comprimento">Comprimento</option>
@@ -40,12 +41,12 @@
 
             <button id="botaoConverter" type="button">Converter</button>
 
-            <label for="resultado">Resultado:</label>
+            <label class="labelResultado" for="resultado">Resultado:</label>
             <span id="resultado"></span>
         </form>
     </main>
 
-
+    <!-- Footer com os créditos -->
     <footer>
         <h3>Criado por Rafael Fantin Camargo</h3>
     </footer>
