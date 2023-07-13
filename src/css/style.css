@@ -43,6 +43,14 @@ form {
     border-radius: 5%;
 }
 
+input{
+    text-align: center;
+}
+
+select{
+    text-align: center;
+}
+
 /* Estilização dos labels */
 
 label {
@@ -54,7 +62,7 @@ label {
 
 /* Estilização do botão Converter, chamado pelo ID por ser único */
 
-#botaoConverter {
+.botaoConverter {
     margin: 15px;
 }
 
